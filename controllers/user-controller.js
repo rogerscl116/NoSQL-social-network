@@ -9,7 +9,7 @@ const userController = {
             select: ('-__v')
         })
         .select('-__v')
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbUsersData => res.json(dbUsersData))
         .catch(err => {
             console.log(er);
             res.status(400).json(err);
@@ -47,7 +47,11 @@ const userController = {
 
     // update user by id
     updateUser({ params, body }, res) {
-        User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
+        User.findOneAndUpdate(
+            { _id: params.id },
+            body,
+            { new: true, runValidators: true }
+            )
         .then(dbUserData => {
             if (!dbUserData) {
                 res.status(404).json({ message: 'No user found with this id!' });
@@ -79,7 +83,6 @@ const userController = {
         { $addToSet: { friends: params.friendId } },
         { new: true }
         )
-        .select("-__v")
         .then(dbUserData => {
             if (!dbUserData) {
             res.status(404).json({ message: "No user found with this id!" });
@@ -99,7 +102,6 @@ const userController = {
         { $pull: { friends: params.friendId } },
         { new: true, runValidators: true }
         )
-        .select("-__v")
         .then((dbUserData) => {
             if (!dbUserData) {
             res.status(404).json({ message: "No friend found with this id!" });
