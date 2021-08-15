@@ -61,35 +61,26 @@ const userController = {
     // delete user
     deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
-        .then(dbUserData => {
+          .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id!' });
-                return;
+              res.status(404).json({ message: 'no user found with this id!' });
+              return;
             }
-            User.updateMany(
-                { _id: { $in: dbUserData.friends } },
-                { $pull: { friends: params.id } }
-            )
-            .then(() => {
-                Thought.deleteMany({ username: dbUserData.username })
-                .then(() => {
-                    res.json({ message: 'Successfully deleted user!' })
-                })
-            })
             res.json(dbUserData);
-        })
-        .catch(err => res.status(400).json(err));
-    },
+          })
+          .catch((err) => res.status(400).json(err));
+      },
+    
 
     // add friend
     addFriend({ params }, res) {
-        User.findByIdAndUpdate(
+        User.findOneAndUpdate(
         { _id: params.id },
         { $addToSet: { friends: params.friendId } },
         { new: true }
         )
         .select("-__v")
-        .then((dbUserData) => {
+        .then(dbUserData => {
             if (!dbUserData) {
             res.status(404).json({ message: "No user found with this id!" });
             return;
@@ -103,7 +94,7 @@ const userController = {
   
     // remove friend
     removeFriend({ params }, res) {
-        User.findByIdAndUpdate(
+        User.findOnendUpdate(
         { _id: params.id },
         { $pull: { friends: params.friendId } },
         { new: true, runValidators: true }
