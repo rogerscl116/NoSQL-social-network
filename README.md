@@ -8,9 +8,9 @@ An API for a social network web application where users can share their thoughts
 
 ## Screenshots
 ### Users
-![MVC Tech Blog Homepage](./public/images/mvc-tech-blog-home.jpg)
+![NoSQL Social Netowrk Users Screenshot](./public/images/)
 ### Thoughts
-![MVC Tech Blog Dashboard](./public/images/mvc-tech-blog-dash.jpg)
+![NoSQL Social Netowrk Thoughts Screenshot](./public/images/)
 
 ## Walkthroughs
 
