@@ -8,9 +8,9 @@ An API for a social network web application where users can share their thoughts
 
 ## Screenshots
 ### Users
-![NoSQL Social Netowrk Users Screenshot](./public/images/)
+![NoSQL Social Network Users Screenshot](./public/images/)
 ### Thoughts
-![NoSQL Social Netowrk Thoughts Screenshot](./public/images/)
+![NoSQL Social Network Thoughts Screenshot](./public/images/)
 
 ## Walkthroughs
 
