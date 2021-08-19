@@ -10,7 +10,7 @@ An API for a social network web application where users can share their thoughts
 ### Users
 ![NoSQL Social Network Users Screenshot](./assets/images/user-route.png)
 ### Thoughts
-![NoSQL Social Network Thoughts Screenshot](./public/images/)
+![NoSQL Social Network Thoughts Screenshot](./assets/images/thought-route.png)
 
 ## Walkthroughs
 
