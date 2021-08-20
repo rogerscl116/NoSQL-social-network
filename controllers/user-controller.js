@@ -52,7 +52,7 @@ const userController = {
         User.findOneAndUpdate(
             { _id: params.id },
             body,
-            { new: true, }
+            { new: true, runValidators: true }
             )
         .then(dbUserData => {
             if (!dbUserData) {
@@ -83,7 +83,7 @@ const userController = {
         User.findOneAndUpdate(
         { _id: params.id },
         { $addToSet: { friends: params.friendId } },
-        { new: true }
+        { new: true, runValidators: true }
         )
         .select("-__v")
         .then(dbUserData => {
