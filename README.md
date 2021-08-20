@@ -6,6 +6,14 @@
 ## Description
 An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list
 
+## Table of Contents
+  * [Screenshots](#screenshots)
+  * [Walkthroughs](#walkthroughs)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
+
 ## Screenshots
 ### GET users route
 ![NoSQL Social Network Users Screenshot](./assets/images/user-route.png)
@@ -15,19 +23,12 @@ An API for a social network web application where users can share their thoughts
 ## Walkthroughs
 
 ### User Routes
-
+![NoSQL Social Network User Routes Video](./assets/videos/NoSQL-social-network-user-routes.gif)
 - [Click here for link](https://drive.google.com/file/d/1vjk6W_Sl8CYcbOhTbw2Is01lDSlCLLyd/view)
 
 ### Thought Routes
-
+![NoSQL Social Network Thought Routes Video](./assets/videos/NoSQL-social-network-thought-routes.gif)
 - [Click here for link](https://drive.google.com/file/d/1S6fCFN9kHkGdznrLSSchNkY_Bi0Z49zV/view)
-
-
-## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [Questions](#questions)
         
 ## Installation
 Enter `npm install` in the terminal to install the necessary dependencies.
