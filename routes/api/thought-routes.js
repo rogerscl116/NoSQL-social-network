@@ -28,7 +28,7 @@ router
   .route('/:thoughtId/reactions')
   .put(addReaction)
 
-// /api/thoughts/:thoughtId/reactions/reactionId
+// /api/thoughts/:thoughtId/reactions/:reactionId
 router
   .route('/:thoughtId/reactions/:reactionId')
   .delete(deleteReaction)
