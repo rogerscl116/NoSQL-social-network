@@ -82,7 +82,7 @@ const thoughtController = {
               res.status(404).json({ message: 'No thought found with this id!' });
               return;
             }
-            res.json(dbThoughtData);
+            res.json({ message: 'Thought deleted!' });
           })
           .catch((err) => res.status(400).json(err));
     },
@@ -120,7 +120,7 @@ const thoughtController = {
                 res.status(404).json({ message: 'No thought found with this id!' });
                 return;
             }
-            res.json(dbThoughtData);
+            res.json({ message: 'Reaction deleted!' });
         })
         .catch(err => res.json(err));
     }
